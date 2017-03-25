@@ -2,31 +2,31 @@
 <html lang="en-us">
 <head>
     <meta charset="utf-8">
-    <title>Mark Github Netlify</title>
+    <title>Mark</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style type="text/css">
 p { font-family: sans-serif; }
 .m-big { font-size: 24pt }
 </style>
 <body>
-<p class="m-big">Netlify</p>
+<p class="m-big"></p>
 <p>
-<a href="https://www.lvalive.com">lvalive.com</a><BR>
+<a href="https://www.lvalive.com">https://www.lvalive.com</a><BR>
 <a href="https://markhargrove28.github.io/">https://markhargrove28.github.io/</a><BR>
 <a href="https://mt01-e3567.firebaseapp.com/">https://mt01-e3567.firebaseapp.com/</a><BR>
-<a href="https://markhargrove28.bitbucket.io/">https://markhargrove28.bitbucket.io/</a>
+<a href="https://markhargrove28.bitbucket.io/">https://markhargrove28.bitbucket.io/</a><BR>
+<a href="https://mark-test1.netlify.com/">https://mark-test1.netlify.com/</a><BR>
 
 </p>
-<img src="mark2014.jpg">
+<img src="https://mark-test1.netlify.com/mark2014.jpg">
 <img src="https://www.lvalive.com/pics/mark2014.jpg">
 <img src="https://markhargrove28.github.io/mark2014.jpg">
 <img src="https://mt01-e3567.firebaseapp.com/mark2014.jpg">
 <img src="https://markhargrove28.bitbucket.io/mark2014.jpg">
-<div id="res"></div>
 <script>
-document.getElementById('res').innerHTML = '<p>' +
-	location.href +
-	'</p>';
+var v = location.host || location.href;
+document.querySelector('.m-big').innerHTML = v;
+document.title = v;
 </script>
 </body>
 </html>
