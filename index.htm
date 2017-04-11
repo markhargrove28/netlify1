@@ -7,28 +7,40 @@
 <style type="text/css">
 p { font-family: sans-serif; }
 .m-big { font-size: 24pt }
+a { color: #555 }
+#pics > div { display: inline-block; font-size:8pt; text-align:center }
+#pics {
+	display: flex;
+	flex-flow: row-wrap;
+	justify-content: space-around;
+	align-items: center;
+}
 </style>
 <body>
 <p class="m-big"></p>
-<p>
-<a href="https://www.lvalive.com">https://www.lvalive.com</a><BR>
-<a href="https://markhargrove28.github.io/">https://markhargrove28.github.io/</a><BR>
-<a href="https://mt01-e3567.firebaseapp.com/">https://mt01-e3567.firebaseapp.com/</a><BR>
-<a href="https://markhargrove28.bitbucket.io/">https://markhargrove28.bitbucket.io/</a><BR>
-<a href="https://mark-test1.netlify.com/">https://mark-test1.netlify.com/</a><BR>
-<a href="https://markhargrove.azurewebsites.net/">https://markhargrove.azurewebsites.net/</a><BR>
 
-</p>
-<img src="https://mark-test1.netlify.com/mark2014.jpg">
-<img src="https://www.lvalive.com/pics/mark2014.jpg">
-<img src="https://markhargrove28.github.io/mark2014.jpg">
-<img src="https://mt01-e3567.firebaseapp.com/mark2014.jpg">
-<img src="https://markhargrove28.bitbucket.io/mark2014.jpg">
-<img src="https://markhargrove.azurewebsites.net/mark2014.jpg">
+<div id="pics">
+
+</div>
 <script>
 var v = location.host || location.href;
 document.querySelector('.m-big').innerHTML = v;
 document.title = v;
+
+var p = ['mark-test1.netlify.com',
+	'www.lvalive.com/pics',
+	'markhargrove28.github.io',
+	'mt01-e3567.firebaseapp.com',
+	'markhargrove28.bitbucket.io',
+	'markhargrove.azurewebsites.net'
+	];
+document.getElementById('pics').innerHTML =
+	p.map(function(e) {
+		return '<DIV>' +
+			'<a href="https://' + e + '">' +
+			'<img src="https://' + e + '/mark2014.jpg" ><BR>' +
+			e + '</a></DIV> ';
+	}).join('');
 </script>
 </body>
 </html>
